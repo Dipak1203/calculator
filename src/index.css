@@ -1,80 +1,87 @@
-
-:root{
-    --primary:#062a53;
-    --secondary:#8d22e4;
-    --dark:#49171e;
-    --light:#eee;
-}
-
 *{
     margin:0;
-    padding:0;
-    box-sizing:border-box;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background:#000;
+    --first:rgb(202, 200, 200);
+    --second:rgb(219, 179, 0);
+    --third:rgb(114, 111, 111);
+    --white:#eeee;
 }
 
 .container{
-    background-color: var(--light);
     height: 100vh;
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
 }
 
 .calculator{
-    width: 100%;
-    max-width:400px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    padding: 10px;
+    background-color: var(--background);
+    padding-bottom: 3px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 64px #343030;
 }
 
-.display{
-    padding: 16px;
-    text-align: right;
-    background-color: var(--dark);
-    color: var(--light);
-    font-size: 26px;
-    font-weight: 300;
-}
-
-.display span{
-    font-size: 24px;
-    color: #888;
-}
-
-button{
-    appearance: none;
-    border: none;
-    outline: none;
-    color: var(--light);
-    padding: 16px;
-    font-size: 28px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-button:hover{
-    opacity: 0.9;
-}
-
-.operator{
+.buttons{
     display: flex;
-}
-
-.operator button{
-    flex: 1 1 0%;
-    background-color: var(--primary);
-    font-weight: 800;
-}
-
-.digits{
-    flex: flex;
     flex-wrap: wrap;
+    text-align: center;
 }
 
-.digits button{
-    flex: 1 1 33.33333%;
-    min-width: 33.33333%;
-    background-color: var(--dark);
+.buttons button{
+    flex: 1 1 20%;
+    min-width: 20%;
+    padding: 26px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    /* margin-left: 2px; */
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 900;
+}
+.buttons button:hover{
+    opacity: .9;
+}
+.first{
+    background-color: var(--first);
+}
+.second{
+    background-color: var(--second);
+    color: var(--white);
+}
+.third{
+    background-color: var(--third);
+    color: var(--white);
+}
+
+.display-section{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+span{
+    width: 100%;
+    color: var(--white);
+    text-align: end;
+    font-size: 20px;
+}
+.dot{
+    font-size: 20px;
+}
+
+p{
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
 }
